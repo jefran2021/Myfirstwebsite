@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+
+
 *{
     margin: 0;
     padding: 0;
@@ -25,12 +28,14 @@ header{
     left: 0;
     width: 100%;
     padding: 1rem 9%;
-    background-color: transparent;
+    /* background-color: transparent; */
+    background-color: black;
     filter: drop-shadow(10px);
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 100;
+    margin-top: auto;
 }
 .logo{
     font-size: 3rem;
@@ -94,6 +99,9 @@ section{
     align-items: center;
     gap: 8rem;
     background-color: black;
+    padding-top: 13rem;
+    margin-left: 12rem;
+
 }
 .home .home-content h1{
     font-size: 6rem;
@@ -110,13 +118,14 @@ span{
 }
 .home-content p{
     font-size: 1.6rem;
+    text-align: justify;
 }
 .home-img{
     border-radius: 50%;
 }
 .home-img img{
     position: relative;
-    width: 32vw;
+    width: 24vw;
     border-radius: 50%;
     box-shadow: 0 0 25px solid #b74b4b;
     cursor: pointer;
@@ -214,20 +223,159 @@ span{
     .home{
         gap: 4rem;
     }
-}
-@media(max-width:995px){
-    .home{
-        flex-direction: column;
-        margin: 5rem 4rem;
-    }
-    .home .home-content h3{
-        font-size: 2.5rem;
-    }
-    .home-content h1{
-        font-size: 5rem;
-    }
     .home-img img{
-        /* width: 70vw; */
+        width: 40px;
         margin-top: 2rem;
     }
 }
+@media (max-width: 995px) {
+    .home {
+        flex-direction: column;
+        margin: 5rem 4rem;
+        align-items: center;
+    }
+    .home .home-content h3 {
+        font-size: 2.5rem;
+        align-items: center;
+    }
+    .home-content h1 {
+        font-size: 5rem;
+        display: none; /* Hide the "Hi, I'm JEFRAN" text */
+        
+    }
+    .home-img img {
+        width: 40vw;
+        margin-top: -10rem;
+    }
+    .social-icons {
+        text-align: center; /* Center align the social icons */
+    }
+    .social-icons a {
+        margin: 0 1rem; /* Adjust margin for better spacing */
+        margin-top: 2rem;
+    }
+    .home-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center align the content */
+    }
+    .btn {
+        display: inline-block; /* Ensure the button centers properly */
+        text-align: center; /* Center align the button */
+        margin: 2rem auto; /* Center align the button */
+    }
+}
+
+/* css for ojt experience */
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400&display=swap');
+.design-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #1f1f1f;
+  min-height: 100vh;
+  padding: 100px 0;
+  font-family: Jost;
+}
+
+.design {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timeline {
+  width: 80%;
+  height: auto;
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.timeline-content {
+  padding: 20px;
+  background: #1f1f1f;
+  border-radius: 5px;
+  color: white;
+  padding: 1.75rem;
+  transition: 0.4s ease;
+  overflow-wrap: break-word !important;
+  margin: 1rem;
+  margin-bottom: 20px;
+  border-radius: 6px;
+}
+
+.timeline-component {
+  margin: 0px 20px 20px 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .timeline {
+    display: grid;
+    grid-template-columns: 1fr 3px 1fr;
+  }
+  .timeline-middle {
+    position: relative;
+    background-image: linear-gradient(45deg, #F27121, #E94057, #8A2387);
+    width: 3px;
+    height: 100%;
+  }
+  .main-middle {
+    opacity: 0;
+  }
+  .timeline-circle {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-image: linear-gradient(45deg, #F27121, #E94057, #8A2387);
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
+
+
+
+
+/* css for gallery card in ojt experience */
+.gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .skill-card {
+            background-color: #1f1f1f;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .skill-card:hover {
+            transform: scale(1.05);
+        }
+
+        .skill-icon {
+            font-size: 48px;
+            color: #3498db;
+            margin-bottom: 15px;
+        }
+
+        .skill-title {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .skill-description {
+            color: #666;
+            font-size: 0.9em;
+        }
