@@ -344,14 +344,20 @@ span{
 /* css for gallery card in ojt experience */
 .gallery {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            /* 250px */
             gap: 20px;
             max-width: 1200px;
+            width: 70%;
             margin: 0 auto;
+            margin-top: -150px
         }
 
         .skill-card {
-            background-color: #1f1f1f;
+            /* background-color: black; */
+            background-color: rgb(15, 15, 15);
+            ;
+            /* 1f1f1f */
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             padding: 20px;
@@ -361,13 +367,53 @@ span{
 
         .skill-card:hover {
             transform: scale(1.05);
+            color: #b74b4b;
+            background-color: rgb(15, 15, 15);
+
+            /* new stuff */
+            cursor: pointer;
+            transition: 1s ease;
+            /* border: 2px solid #b74b4b; */
+            border: 2px solid rgb(15, 15, 15);
+            font-weight: 500;
+            letter-spacing: 0.3rem;
         }
 
         .skill-icon {
             font-size: 48px;
-            color: #3498db;
-            margin-bottom: 15px;
+            /* color: #3498db; */
+            color: #b74b4b;
+            /* margin-bottom: 15px; */
+
+            /* new stuff */
+            width: 80px; /* Set equal width */
+            height: 80px; /* Set equal height */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%; /* Make it a circle */
+            transition: background-color 0.3s, color 0.3s;
         }
+        
+        .skill-card:hover .skill-icon {
+            color: black;
+          
+            background-color: #b74b4b;
+            box-shadow: 0  0 25px #b74b4b;
+            border-radius: 50%;
+            
+        }
+
+        .skill-card:hover .skill-description {
+            color: white;
+            font-size: 0.9em;
+        }
+
+        .skill-card:hover .skill-title {
+            color: white;
+            font-size: 1em;
+        }
+        
 
         .skill-title {
             font-size: 1.2em;
@@ -379,3 +425,6 @@ span{
             color: #666;
             font-size: 0.9em;
         }
+
+
+
