@@ -238,9 +238,10 @@ span{
         font-size: 2.5rem;
         align-items: center;
     }
-    .home-content h1 {
+    .home-content .my_intro {
         font-size: 5rem;
-        display: none; /* Hide the "Hi, I'm JEFRAN" text */
+
+        display: none;/*  Hide the "Hi, I'm JEFRAN" text */
         
     }
     .home-img img {
@@ -355,7 +356,8 @@ span{
 
         .skill-card {
             /* background-color: black; */
-            background-color: rgb(15, 15, 15);
+            /* background-color: rgb(15, 15, 15); */
+            background-color: black;
             ;
             /* 1f1f1f */
             border-radius: 10px;
@@ -368,7 +370,7 @@ span{
         .skill-card:hover {
             transform: scale(1.05);
             color: #b74b4b;
-            background-color: rgb(15, 15, 15);
+            background-color: rgba(0, 0, 0, 0.212);
 
             /* new stuff */
             cursor: pointer;
@@ -383,7 +385,9 @@ span{
             font-size: 48px;
             /* color: #3498db; */
             color: #b74b4b;
-            /* margin-bottom: 15px; */
+            margin-bottom: 10px;
+            margin-left: 25px;
+            /* margin-right: 10px; */
 
             /* new stuff */
             width: 80px; /* Set equal width */
@@ -396,7 +400,7 @@ span{
         }
         
         .skill-card:hover .skill-icon {
-            color: black;
+            color: rgb(15, 15, 15);
           
             background-color: #b74b4b;
             box-shadow: 0  0 25px #b74b4b;
@@ -411,7 +415,7 @@ span{
 
         .skill-card:hover .skill-title {
             color: white;
-            font-size: 1em;
+            font-size: 1.2em;
         }
         
 
@@ -425,6 +429,49 @@ span{
             color: #666;
             font-size: 0.9em;
         }
+
+
+        /* THIS IS FOR ABOUT ME */
+        .row {
+            margin-top: 50px;
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0 px;
+            margin-left: 180px;
+            margin-right: 180px;
+          }
+          
+          /* Create two equal columns that sits next to each other */
+          .column {
+            flex: 25%;
+            padding: 0 4px;
+          }
+          
+          .column img {
+            margin-top: 8px;
+            vertical-align: middle;
+          }
+
+
+        
+
+        /* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
 
 
 
