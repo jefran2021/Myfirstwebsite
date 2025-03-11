@@ -116,8 +116,8 @@ section{
 span{
     color: #b74b4b;
 }
-.home-content h3{
-    font-size: 4rem;
+.home-content h5{
+    font-size: 3rem;
     margin-bottom: 1rem;
     font-weight: 700;
 }
@@ -126,6 +126,7 @@ span{
     text-align: justify;
 }
 .home-img{
+    margin-bottom: -5rem;
     border-radius: 50%;
 }
 .home-img img{
@@ -183,24 +184,26 @@ span{
     font-size: 34px;
     font-weight: 600;
     min-width: 280px;
+
+    
 }
 .typing-text span{
     position: relative;
 }
 .typing-text span::before{
-    content: "software Developer";
+    content: " ";
     color: #b74b4b;
-    animation: words 20s infinite;
+    animation: words 7s infinite;
 }
 .typing-text span::after{
-    content: "";
+    content: " ";
     background-color: black;
-    position: absolute;
+    position: in-line;
     width: calc(100% + 8px);
     height: 100%;
     border-left: 3px solid black;
     right: -8;
-    animation: cursor 0.6s infinite;
+    animation: cursor 0.7s infinite;
 }
 @keyframes cursor{
     to{
@@ -208,23 +211,111 @@ span{
     }
 }
 @keyframes words{
-    0%, 20%{
-        content: "Web Developer";
+    0%, 2.94%{
+        content: "I";
     }
-    21%, 40%{
-        content: "Developer";
+    2.95%, 5.88%{
+        content: "I.";
     }
-    41%, 60%{
-        content: "Web Designer";
+    5.89%, 8.82%{
+        content: "I.T";
     }
-    61%, 80%{
-        content: "Youtuber";
+    8.83%, 11.76%{
+        content: "I.T.";
     }
-    81%, 100%{
-        content: "Script Writer";
+    11.77%, 14.7%{
+        content: "I.T. ";
+    }
+    14.71%, 17.64%{
+        content: "I.T. P";
+    }
+    17.65%, 20.58%{
+        content: "I.T. Pr";
+    }
+    20.59%, 23.52%{
+        content: "I.T. Pro";
+    }
+    23.53%, 26.46%{
+        content: "I.T. Prof";
+    }
+    26.47%, 29.4%{
+        content: "I.T. Profe";
+    }
+    29.41%, 32.34%{
+        content: "I.T. Profes";
+    }
+    32.35%, 35.28%{
+        content: "I.T. Profess";
+    }
+    35.29%, 38.22%{
+        content: "I.T. Professi";
+    }
+    38.23%, 41.16%{
+        content: "I.T. Professio";
+    }
+    41.17%, 44.1%{
+        content: "I.T. Profession";
+    }
+    44.11%, 47.04%{
+        content: "I.T. Professiona";
+    }
+    47.05%, 49.98%{
+        content: "I.T. Professional";
+    }
+    49.99%, 52.92%{
+        content: "I.T. Professiona";
+    }
+    52.93%, 55.86%{
+        content: "I.T. Profession";
+    }
+    55.87%, 58.8%{
+        content: "I.T. Professio";
+    }
+    58.81%, 61.74%{
+        content: "I.T. Professi";
+    }
+    61.75%, 64.68%{
+        content: "I.T. Profess";
+    }
+    64.69%, 67.62%{
+        content: "I.T. Profes";
+    }
+    67.63%, 70.56%{
+        content: "I.T. Profe";
+    }
+    70.57%, 73.5%{
+        content: "I.T. Prof";
+    }
+    73.51%, 76.44%{
+        content: "I.T. Pro";
+    }
+    76.45%, 79.38%{
+        content: "I.T. Pr";
+    }
+    79.39%, 82.32%{
+        content: "I.T. P";
+    }
+    82.33%, 85.26%{
+        content: "I.T. ";
+    }
+    85.27%, 88.2%{
+        content: "I.T.";
+    }
+    88.21%, 91.14%{
+        content: "I.T";
+    }
+    91.15%, 94.08%{
+        content: "I.";
+    }
+    94.09%, 97.02%{
+        content: "I";
+    }
+    97.03%, 100%{
+        content: "";
     }
 }
-@media (max-width: 1000px){
+
+@media (max-width: 100px){
     .home{
         gap: 4rem;
     }
@@ -233,7 +324,7 @@ span{
         margin-top: 2rem;
     }
 }
-@media (max-width: 995px) {
+@media (max-width: 900px) {
     .home {
         flex-direction: column;
         margin: 5rem 4rem;
@@ -316,7 +407,7 @@ span{
 .timeline-component {
   margin: 0px 20px 20px 20px;
 } */
-
+/* 
 @media screen and (min-width: 768px) {
   .timeline {
     display: grid;
@@ -342,7 +433,7 @@ span{
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
   }
-}
+} */
 
 
 
@@ -456,9 +547,6 @@ span{
             margin-top: 8px;
             vertical-align: middle;
           }
-
-
-        
 
         /* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 800px) {
