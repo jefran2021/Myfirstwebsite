@@ -13,6 +13,7 @@
 }
 html{
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 body{
     width: 100%;
@@ -95,18 +96,19 @@ section{
 }
 .home{
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+    flex-wrap: wrap;
     gap: 8rem;
-    background-color: black;
+    background-color: red; /* ! change this to black later*/
     padding-top: 13rem;
     margin-left: 12rem;
 
 }
-
-/* para lang toh sa ojt experience */
-
-
+/* !delete this home-content laters */
+.home-content{
+    background-color: blue;
+}
 .home .home-content h1{
     font-size: 6rem;
     font-weight: 700;
@@ -138,9 +140,11 @@ span{
     cursor: pointer;
     transition: 0.2s linear;
 }
+/* delete nalang ba toh? */
 .home-img img:hover{
     font-size: 1.8rem;
     font-weight: 500;
+    
 }
 .social-icons a{
     display: inline-flex;
@@ -329,7 +333,7 @@ span{
 @media (max-width: 900px) {
     .home {
         flex-direction: column;
-        margin: 5rem 4rem;
+        margin: 3.7rem 4rem;
         align-items: center;
     }
     .home .home-content h3 {
@@ -375,29 +379,119 @@ span{
 }
 
 /* css for ojt experience */
+
+.title-section {
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+    background-color: transparent;
+}
+.title-section h1{
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1.3;
+    display: flex;
+}
+
+.text-section {
+    font-size: rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: #666;
+    flex: 1; 
+    /* padding: 20px; */
+    color: white;
+    /* text-align: justify; */
+    /* line-height: 1.5; */
+    
+
+}
+/* this is for scrolling */
+[id] {
+    scroll-margin-top: 100px; /* Adjust this value to match your navbar height */
+
+  }
+
+.skill-content {
+    color: white;
+    background-color: blueviolet;
+
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    gap: 8rem;
+
+    margin-right: 15rem;
+    /* background-color: black; */
+    /* padding-top: 13rem;
+    margin-left: 12rem; */
+}
+
+.skill-subsection{
+    display: flex;
+    justify-content: center;
+    text-align: justify;
+    flex-wrap: wrap;
+    flex-direction: row;
+    color: green;
+    background-color: goldenrod;
+    gap: 1.5rem;
+
+}
+
+
+.column img {
+    background-color: chocolate;
+
+    position: relative;
+    /* width: 24vw; */
+    border-radius: 5%;
+}
+
+
+
 /* css for gallery card in ojt experience */
 .gallery {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
             /* 250px */
-            gap: 20px;
-            max-width: 1200px;
-            width: 70%;
-            margin: 0 auto;
-            margin-top: -340px
+            gap: 30px; /* ! play with this later */
+            max-width: 800px;
+            width: 100%;
+            margin-top: -50px; 
+            background-color: green; /* ! remove this later */
+            height: 100%;
+
+            /* allowance, when a hover trying to enlarge the cards */
+            padding: 10px;
+            align-items: stretch;
         }
 
         .skill-card {
             /* background-color: black; */
             /* background-color: rgb(15, 15, 15); */
-            background-color: black;
-            ;
+            display: flex;
+            /* justify-content: first baseline; */
+            flex-direction: column;
+            align-items: center;
+            background-color: pink;
+
+            /* flex: 1; */
+            height: 100%;
+            
             /* 1f1f1f */
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            padding: 20px;
+            padding: 15px;
             text-align: center;
             transition: transform 0.3s ease;
+            justify-content: center;
+
+            position: relative;
         }
 
         .skill-card:hover {
@@ -407,19 +501,21 @@ span{
 
             /* new stuff */
             cursor: pointer;
-            transition: 1s ease;
+            transition: .5s ease;
             /* border: 2px solid #b74b4b; */
             border: 2px solid rgb(15, 15, 15);
             font-weight: 500;
-            letter-spacing: 0.3rem;
+            letter-spacing: 0.1rem;
+            z-index: 1;
+            margin: -3px;
         }
 
         .skill-icon {
             font-size: 48px;
             /* color: #3498db; */
             color: #b74b4b;
-            margin-bottom: 10px;
-            margin-left: 25px;
+            /* margin-bottom: 10px; */
+            /* margin-left: 25px; */
             /* margin-right: 10px; */
 
             /* new stuff */
@@ -441,10 +537,7 @@ span{
             
         }
 
-        .skill-card:hover .skill-description {
-            color: white;
-            font-size: 0.9em;
-        }
+
 
         .skill-card:hover .skill-title {
             color: white;
@@ -465,43 +558,47 @@ span{
 
 
         /* THIS IS FOR ABOUT ME */
+        .photo-grid {
+            padding-top: 5rem;
+            background-color: burlywood;
+
+        }
         .row {
-            margin-top: 50px;
+            background-color: aqua;
             display: flex;
             flex-wrap: wrap;
-            padding: 0 px;
-            margin-left: 180px;
-            margin-right: 180px;
+            /* padding: 0 1px; */
           }
           
           /* Create two equal columns that sits next to each other */
           .column {
+            background-color: chartreuse;
             flex: 25%;
+            max-width: 25%;
             padding: 0 4px;
           }
           
           .column img {
             margin-top: 8px;
             vertical-align: middle;
+            width: 100%;
           }
 
         /* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width: 800px) {
-  .column {
-    -ms-flex: 50%;
-    flex: 50%;
-    max-width: 50%;
-  }
-}
+        @media screen and (max-width: 800px) {
+            .column {
+                flex: 50%;
+                max-width: 50%;
+            }
+        }
 
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .column {
-    -ms-flex: 100%;
-    flex: 100%;
-    max-width: 100%;
-  }
-}
+        /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 600px) {
+            .column {
+                flex: 100%;
+                max-width: 100%;
+            }
+        }
 
 
 
