@@ -100,15 +100,12 @@ section{
     align-items: center;
     flex-wrap: wrap;
     gap: 8rem;
-    background-color: red; /* ! change this to black later*/
+    background-color: black; /* ! change this to black later*/
     padding-top: 13rem;
     margin-left: 12rem;
 
 }
-/* !delete this home-content laters */
-.home-content{
-    background-color: blue;
-}
+
 .home .home-content h1{
     font-size: 6rem;
     font-weight: 700;
@@ -370,6 +367,9 @@ span{
         display: flex;
         flex-direction: column;
         align-items: center; /* Center align the content */
+
+        
+        
     }
     .btn {
         display: inline-block; /* Ensure the button centers properly */
@@ -379,36 +379,34 @@ span{
 }
 
 /* css for ojt experience */
-
-.title-section {
-    display: flex;
-    justify-content: center;
-
-    width: 100%;
-    background-color: transparent;
-}
-.title-section h1{
-    font-size: 6rem;
-    font-weight: 700;
-    line-height: 1.3;
-    display: flex;
-}
-
-.text-section {
-    font-size: rem;
+.display-area {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    align-items: flex-start;
-    background-color: #666;
-    flex: 1; 
-    /* padding: 20px; */
-    color: white;
-    /* text-align: justify; */
-    /* line-height: 1.5; */
-    
-
+    align-items: center;
+    margin: 20px 0;
+    min-height: 220px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 4px;
 }
+
+.image-placeholder {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 200px;
+    background-color: #f5f5f5;
+    color: #999;
+    border: 1px dashed #ccc;
+}
+
+
+
+
 /* this is for scrolling */
 [id] {
     scroll-margin-top: 100px; /* Adjust this value to match your navbar height */
@@ -416,32 +414,36 @@ span{
   }
 
 .skill-content {
+    /* scroll-snap-type: y mandatory; */
+    /* overflow-y: scroll; */
+    /* height: 100vh; */
+
     color: white;
     background-color: blueviolet;
 
+
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-around;
     flex-direction: column;
     align-items: center;
-    gap: 8rem;
+    
+    
 
     margin-right: 15rem;
-    /* background-color: black; */
-    /* padding-top: 13rem;
-    margin-left: 12rem; */
+    background-color: black;
+
+    
+    gap: 100vh;
+    
+    
+
+
+
+
+    
+    
 }
 
-.skill-subsection{
-    display: flex;
-    justify-content: center;
-    text-align: justify;
-    flex-wrap: wrap;
-    flex-direction: row;
-    color: green;
-    background-color: goldenrod;
-    gap: 1.5rem;
-
-}
 
 
 .column img {
@@ -463,7 +465,7 @@ span{
             max-width: 800px;
             width: 100%;
             margin-top: -50px; 
-            background-color: green; /* ! remove this later */
+            background-color: black
             height: 100%;
 
             /* allowance, when a hover trying to enlarge the cards */
@@ -478,7 +480,7 @@ span{
             /* justify-content: first baseline; */
             flex-direction: column;
             align-items: center;
-            background-color: pink;
+            background-color: transparent;
 
             /* flex: 1; */
             height: 100%;
@@ -560,11 +562,11 @@ span{
         /* THIS IS FOR ABOUT ME */
         .photo-grid {
             padding-top: 5rem;
-            background-color: burlywood;
+            background-color: transparent;
 
         }
         .row {
-            background-color: aqua;
+            background-color: transparent;
             display: flex;
             flex-wrap: wrap;
             /* padding: 0 1px; */
@@ -572,7 +574,7 @@ span{
           
           /* Create two equal columns that sits next to each other */
           .column {
-            background-color: chartreuse;
+            background-color: transparent;
             flex: 25%;
             max-width: 25%;
             padding: 0 4px;
