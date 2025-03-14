@@ -48,7 +48,7 @@ header{
 .logo:hover{
     transform: scale(1.1);
 }
-.nav a{
+nav a{
     font-size: 1.8rem;
     color: white;
     margin-left: 4rem;
@@ -56,8 +56,8 @@ header{
     transition: 0.3s ease;
     border-bottom: 3px solid transparent;
 }
-.nav a:hover,
-.nav a.active{
+nav a:hover,
+nav a.active{
     color: #b74b4b;
     border-bottom: 3px solid #b74b4b;
 }
@@ -116,6 +116,8 @@ span{
     color: #b74b4b;
 
 }
+
+
 .home-content h5{
     font-size: 3rem;
     margin-bottom: 1rem;
@@ -144,9 +146,10 @@ span{
     
 }
 .social-icons a{
-    display: inline-block;
-    justify-content: right;
-    align-items: left;
+    /* remarks: i dont remember kaya ni ginawan ko nalnag ng paraan */
+    display:inline-flex;
+    justify-content: center;
+    align-items: center;
     width: 4rem;
     height: 4rem;
     background-color: transparent;
@@ -357,7 +360,11 @@ span{
     }
 
     .social-icons {
+        display: inline-block;
         text-align: right; /* Right align the social icons */
+        /* remove this later: the whole line below */
+        
+        background-color: transparent; 
     }
     .social-icons a {
         margin: 0 1rem; /* Adjust margin for better spacing */
@@ -366,7 +373,10 @@ span{
     .home-content {
         display: flex;
         flex-direction: row;
-        align-items: right; /* Right align the content */
+        align-items: center; /* Right align the content */
+        /* remarks: idk kaya nagdagdagnalang ako ng flexwrap */
+        flex-wrap: wrap;
+        
 
         
         
@@ -394,10 +404,10 @@ span{
 .image-placeholder {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
-    width: 600px;
+    width: 350px;
     height: 200px;
     background-color: #f5f5f5;
     color: #999;
@@ -419,12 +429,12 @@ span{
     /* height: 100vh; */
 
     color: white;
-    background-color: blueviolet;
 
 
     display: flex;
     justify-content: space-around;
     flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
     
     
@@ -465,7 +475,7 @@ span{
             max-width: 800px;
             width: 100%;
             margin-top: -50px; 
-            background-color: black
+            background-color: black;
             height: 100%;
 
             /* allowance, when a hover trying to enlarge the cards */
