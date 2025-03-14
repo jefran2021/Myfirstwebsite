@@ -465,7 +465,7 @@ span{
             max-width: 800px;
             width: 100%;
             margin-top: -50px; 
-            background-color: black
+            background-color: black; 
             height: 100%;
 
             /* allowance, when a hover trying to enlarge the cards */
