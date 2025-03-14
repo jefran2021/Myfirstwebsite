@@ -48,7 +48,7 @@ header{
 .logo:hover{
     transform: scale(1.1);
 }
-nav a{
+.nav a{
     font-size: 1.8rem;
     color: white;
     margin-left: 4rem;
@@ -56,8 +56,8 @@ nav a{
     transition: 0.3s ease;
     border-bottom: 3px solid transparent;
 }
-nav a:hover,
-nav a.active{
+.nav a:hover,
+.nav a.active{
     color: #b74b4b;
     border-bottom: 3px solid #b74b4b;
 }
@@ -144,9 +144,9 @@ span{
     
 }
 .social-icons a{
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
+    display: inline-block;
+    justify-content: right;
+    align-items: left;
     width: 4rem;
     height: 4rem;
     background-color: transparent;
@@ -357,7 +357,7 @@ span{
     }
 
     .social-icons {
-        text-align: center; /* Center align the social icons */
+        text-align: right; /* Right align the social icons */
     }
     .social-icons a {
         margin: 0 1rem; /* Adjust margin for better spacing */
@@ -365,8 +365,8 @@ span{
     }
     .home-content {
         display: flex;
-        flex-direction: column;
-        align-items: center; /* Center align the content */
+        flex-direction: row;
+        align-items: right; /* Right align the content */
 
         
         
@@ -388,16 +388,16 @@ span{
     min-height: 220px;
     background-color: white;
     padding: 10px;
-    border-radius: 4px;
+    border-radius: 10px;
 }
 
 .image-placeholder {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 300px;
+    width: 600px;
     height: 200px;
     background-color: #f5f5f5;
     color: #999;
